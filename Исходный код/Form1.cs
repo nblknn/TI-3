@@ -59,8 +59,9 @@ namespace lab3
 
         private void оПрограммеToolStripMenuItem1_Click(object sender, EventArgs e) {
             MessageBox.Show("Данная программа реализует шифратор по алгоритму\nРабина для файла с любым содержимым.\n" +
-                "Параметры:\np: простое число; p > 3; p mod 4 = 3\n" +
-                "q: простое число; q > 3511; q mod 4 = 3\nb: 0 < b < 10533; b < n = p * q", "О программе");
+                "Параметры:\np: простое число; p mod 4 = 3\n" +
+                "q: простое число; q mod 4 = 3\nb: b < n = p * q\n"+
+                "Для правильной расшифровки желательно использовать\np > 3; q > 3511; 0 < b < 10533", "О программе");
         }
 
         private void baseKeyPress(object sender, KeyPressEventArgs e) {

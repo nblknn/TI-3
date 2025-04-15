@@ -15,14 +15,14 @@ namespace lab3 {
         private int blockSize;
 
         public Rabin(BigInteger p, BigInteger q, BigInteger b) {
-            if (p <= 3)
-                throw new ArgumentException("p должно быть больше 3!");
+       /*     if (p <= 3)
+                throw new ArgumentException("p должно быть больше 3!");*/
             if (p % 4 != 3)
                 throw new ArgumentException("p должно делиться на 4 с остатком 3!");
             if (!IsPrime(p))
                 throw new ArgumentException("p должно быть простым числом!");
-            if (q <= 3511)
-                throw new ArgumentException("q должно быть больше 3511!");
+        /*    if (q <= 3511)
+                throw new ArgumentException("q должно быть больше 3511!");*/
             if (q % 4 != 3)
                 throw new ArgumentException("q должно делиться на 4 с остатком 3!");
             if (!IsPrime(q))
@@ -32,8 +32,8 @@ namespace lab3 {
             n = p * q;
             if (b >= n)
                 throw new ArgumentException("b должно быть меньше n!");
-            if (b >= 10533)
-                throw new ArgumentException("b должно быть меньше 10533!");
+       /*     if (b >= 10533)
+                throw new ArgumentException("b должно быть меньше 10533!");*/
             this.b = b;
             blockSize = (int)(BigInteger.Log2(n) / 8) + 1;
         }
